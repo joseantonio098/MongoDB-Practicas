@@ -1,0 +1,3 @@
+use("platzi_store") /* Crear y usar database */
+
+db.products.find() /* Buscar colección products */

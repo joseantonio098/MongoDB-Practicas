@@ -1,0 +1,14 @@
+use("platzi_store")
+
+/* Actualizando un producto */
+db.products.updateOne(
+    // Query con id generado por mongodb
+    {_id: ObjectId('64c9e4514c29c787cee91fbf')},
+
+    // Change => operators
+    { 
+        $inc: { /* Incrementar */
+            price: 100,
+        }
+    }
+)

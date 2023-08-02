@@ -1,0 +1,14 @@
+use("sample_training")
+
+/* Actualizando muchos documentos */
+db.zips.updateMany(
+    // Query
+    { city: "CLEVELAND" },
+
+    // Update -> operators
+    {
+        $inc: { /* Incrementar */
+            pop: 1000
+        }
+    }
+)
