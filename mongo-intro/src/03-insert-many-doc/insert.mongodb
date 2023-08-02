@@ -1,0 +1,42 @@
+use("platzi_store") /* Crear y usar database */
+
+db.products.drop() /* Borrar todos los documentos */
+
+/* Insertar muchos documentos */
+db.products.insertMany([
+    {
+        _id: 1,
+        name: "Product 1",
+        price: 100
+    },
+    {
+        _id: 2,
+        name: "Product 2",
+        price: 20
+    },
+    {
+        _id: 2,
+        name: "Product 2",
+        price: 200
+    },
+    {
+        _id: 3,
+        name: "Product 3",
+        price: 120
+    },
+    {
+        _id: 4,
+        name: "Product 4",
+        price: 40
+    },
+    {
+        name: "Product 5",
+        price: 55
+    }
+], {
+    /* Instrucciones */
+    ordered: false // Si hay duplicados (id) no interrumpir con los demás
+})
+
+/* Buscar colección products */
+db.products.find();

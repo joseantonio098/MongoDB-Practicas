@@ -1,0 +1,14 @@
+use("platzi_store") /* Crear y usar database */
+
+/* Insertar un documento y crear colección products */
+db.products.insertOne({
+    _id: 4, // Identificador único
+    name: "Product 1",
+    price: 1000
+})
+
+db.products.insertOne({
+    _id: 5,
+    name: "Product 2",
+    price: 100
+})
